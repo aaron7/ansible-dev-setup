@@ -1,2 +1,5 @@
 - name: Setup VSCode
   include: vscode.yml
+
+- name: Setup git
+  include: git.yml

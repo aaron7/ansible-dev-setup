@@ -28,3 +28,4 @@ ansible-playbook playbook.yml -K
 - Packages (brew/cask or apt/deb)
 - VSCode config (+ extension sync)
 - Some ubuntu hardware config
+- Git config
