@@ -36,5 +36,5 @@
 # Install zplug (don't have brew here)
 - name: install zplug
   git:
-    repo: 'https://github.com/zplug/zplug'
+    repo: https://github.com/zplug/zplug
     dest: ~/.zplug

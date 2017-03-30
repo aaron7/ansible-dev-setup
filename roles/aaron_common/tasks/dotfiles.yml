@@ -2,20 +2,22 @@
 - name: link tmux.conf
   file:
     src: '{{ ansible_env.PWD }}/roles/aaron_common/files/tmux/tmux.conf'
-    path: '~/.tmux.conf'
+    path: ~/.tmux.conf
     state: link
     force: yes
   tags: dotfiles
 
 # Tmuxinator
 - name: create tmuxinator config directory
-  file: path='~/.tmuxinator' state=directory
+  file:
+    path: ~/.tmuxinator
+    state: directory
   tags: dotfiles
 
 - name: link tmuxinator session configurations
   file:
     src: '{{ ansible_env.PWD }}/roles/aaron_common/files/tmuxinator/{{ item }}'
-    path: '~/.tmuxinator/{{ item }}'
+    path: ~/.tmuxinator/{{ item }}
     state: link
     force: yes
   with_items:
@@ -27,7 +29,7 @@
 - name: link vimrc
   file:
     src: '{{ ansible_env.PWD }}/roles/aaron_common/files/vim/vimrc'
-    path: '~/.vimrc'
+    path: ~/.vimrc
     state: link
     force: yes
   tags: dotfiles
@@ -36,7 +38,7 @@
 - name: link zsh
   file:
     src: '{{ ansible_env.PWD }}/roles/aaron_common/files/zsh/zshrc'
-    path: '~/.zshrc'
+    path: ~/.zshrc
     state: link
     force: yes
   tags: dotfiles

@@ -1,9 +1,9 @@
 - git_config:
     name: user.email
     scope: global
-    value: 'aaron@aaronkirkbride.com'
+    value: aaron@aaronkirkbride.com
 
 - git_config:
     name: user.name
     scope: global
-    value: 'Aaron Kirkbride'
+    value: Aaron Kirkbride
