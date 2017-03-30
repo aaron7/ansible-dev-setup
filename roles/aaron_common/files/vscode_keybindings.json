@@ -1,0 +1,6 @@
+// Place your key bindings in this file to overwrite the defaults
+[
+    { "key": "cmd+y", "command": "redo", "when": "editorTextFocus" },
+    { "key": "cmd+r", "command": "workbench.action.gotoSymbol" },
+    { "key": "cmd+shift+a", "command": "sortLines.sortLinesUnique"}
+]

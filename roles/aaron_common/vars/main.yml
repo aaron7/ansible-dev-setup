@@ -1,0 +1,22 @@
+---
+vscode_extensions:
+  - dbaeumer.vscode-eslint
+  - deerawan.vscode-dash
+  - donjayamanne.python
+  - EditorConfig.EditorConfig
+  - HookyQR.beautify
+  - jdforsythe.add-new-line-to-files
+  - lukehoban.Go
+  - misogi.ruby-rubocop
+  - mohsen1.prettify-json
+  - PeterJausovec.vscode-docker
+  - rebornix.Ruby
+  - shanoor.vscode-nginx
+  - shardulm94.trailing-spaces
+  - shinnn.stylelint
+  - SintrumIT.theme-oceanic-next-italic
+  - stkb.rewrap
+  - Tyriar.sort-lines
+  - waderyan.gitblame
+  - xabikos.ReactSnippets
+  - zxh404.vscode-proto3

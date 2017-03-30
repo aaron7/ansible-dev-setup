@@ -1,0 +1,12 @@
+---
+apt_packages:
+  - git
+  - python3
+  - redshift
+  - redshift-gtk
+
+deb_uris:
+  - name: code
+    uri: https://go.microsoft.com/fwlink/?LinkID=760868
+  - name: google-chrome-stable
+    uri: https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb

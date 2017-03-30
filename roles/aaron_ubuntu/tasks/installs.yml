@@ -1,0 +1,25 @@
+# Install apt packages
+- name: apt packages
+  apt:
+    name: '{{ item }}'
+  with_items: '{{ apt_packages }}'
+  become: true
+  tags:
+    - apt
+
+# Install deb packages from uris, if not already installed
+- name: deb uris check
+  shell: dpkg -s '{{ item.name }}' | grep 'install ok installed' || true
+  register: deb_uris_check_result
+  with_items: '{{ deb_uris }}'
+  tags:
+    - apt
+
+- name: deb uris install missing
+  apt:
+    deb: '{{ item.1.uri }}'
+  with_indexed_items: '{{ deb_uris }}'
+  when: deb_uris_check_result.results[{{ item.0 }}].stdout == ""
+  become: true
+  tags:
+    - apt

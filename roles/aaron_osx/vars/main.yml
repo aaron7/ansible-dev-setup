@@ -1,0 +1,104 @@
+---
+homebrew_taps:
+  - caskroom/cask
+  - caskroom/fonts
+
+homebrew_packages:
+  - autoconf
+  - autojump
+  - automake
+  - cloc
+  - coreutils
+  - cowsay
+  - exiftool
+  - fdupes
+  - ffmpeg
+  - freetype
+  - fswatch
+  - git
+  - gpg
+  - hub
+  - homebrew/dupes/srm
+  - imagemagick
+  - jhead
+  - jpeg
+  - jpegoptim
+  - jq
+  - lesspipe
+  - libpng
+  - libtool
+  - libyaml
+  - ncdu
+  - node
+  - openssl
+  - percona-toolkit
+  - pkg-config
+  - pngcrush
+  - postgresql
+  - pypy
+  - python
+  - python3
+  - readline
+  - rtmpdump
+  - ruby
+  - ruby-build
+  - ruby-install
+  - shellcheck
+  - sqlite
+  - tree
+  - watch
+  - wget
+  - xz
+  - you-get
+
+homebrew_cask_packages:
+  - anki
+  - arq
+  - bitbar
+  - calibre
+  - dash
+  - disk-inventory-x
+  - firefox
+  - flux
+  - franz
+  - google-chrome
+  - iterm2
+  - karabiner
+  - mactex
+  - mplayerx
+  - paintbrush
+  - playonmac
+  - sequel-pro
+  - skim
+  - skype
+  - steam
+  - sublime-text
+  - texmaker
+  - visual-studio-code
+  - vlc
+  - wireshark
+
+pip_packages:
+  - awscli
+  - boto
+  - boto3
+  - csvkit
+  - ec2-ssh-yplan
+  - flake8
+  - ipdb
+  - ipython
+  - pip-tools
+  - pycodestyle
+  - pygments
+  - pythonpy
+  - pyyaml
+  - requests
+  - six
+  - tox
+  - virtualenvwrapper
+
+npm_packages:
+  - yarn
+
+gem_packages:
+  - jekyll

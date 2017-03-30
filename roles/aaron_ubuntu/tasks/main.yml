@@ -1,0 +1,5 @@
+- name: Setup hardware
+  include: hardware.yml
+
+- name: Install things
+  include: installs.yml

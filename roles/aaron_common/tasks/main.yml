@@ -1,0 +1,2 @@
+- name: Setup VSCode
+  include: vscode.yml

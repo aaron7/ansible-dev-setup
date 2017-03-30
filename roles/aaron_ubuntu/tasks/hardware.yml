@@ -1,0 +1,25 @@
+# Magicmouse settings
+- name: magicmouse kernal module configuration
+  copy:
+    src: "{{ ansible_env.PWD }}/roles/aaron_ubuntu/files/hardware/magicmouse.conf"
+    dest: /etc/modprobe.d/magicmouse.conf
+    force: no
+  become: true
+
+- name: magicmouse driver settings configuration
+  copy:
+    src: '{{ ansible_env.PWD }}/roles/aaron_ubuntu/files/hardware/50-magicmouse.conf'
+    dest: /usr/share/X11/xorg.conf.d/50-magicmouse.conf
+    force: no
+  become: true
+
+# Enable bluetooth at startup
+- name: enable bluetooth at startup
+  blockinfile:
+    dest: /etc/rc.local
+    insertbefore: 'exit 0'
+    block: |
+      # Enable bluetooth at startup
+      rfkill unblock all
+
+  become: true
