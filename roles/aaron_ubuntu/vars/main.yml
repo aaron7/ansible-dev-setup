@@ -1,6 +1,8 @@
 ---
 apt_packages:
   - git
+  - keepassx
+  - p7zip-full
   - python3
   - redshift
   - redshift-gtk
