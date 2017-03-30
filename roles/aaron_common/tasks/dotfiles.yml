@@ -31,3 +31,12 @@
     state: link
     force: yes
   tags: dotfiles
+
+# Zsh
+- name: link zsh
+  file:
+    src: '{{ ansible_env.PWD }}/roles/aaron_common/files/zsh/zshrc'
+    path: '~/.zshrc'
+    state: link
+    force: yes
+  tags: dotfiles

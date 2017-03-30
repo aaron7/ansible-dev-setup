@@ -32,3 +32,9 @@
   when: deb_uris_check_result.results[{{ item.0 }}].stdout == ""
   become: true
   tags: apt
+
+# Install zplug (don't have brew here)
+- name: install zplug
+  git:
+    repo: 'https://github.com/zplug/zplug'
+    dest: ~/.zplug

@@ -30,3 +30,4 @@ ansible-playbook playbook.yml -K
 - Some ubuntu hardware config
 - Git config
 - Dotfiles
+- zsh with [zplug](https://github.com/zplug/zplug)
