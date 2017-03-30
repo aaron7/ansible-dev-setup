@@ -8,3 +8,8 @@
   lineinfile:
     dest: ~/.profile
     line: export PATH=$PATH:$HOME/go/bin
+
+- name: alias hub as git
+  lineinfile:
+    dest: ~/.profile
+    line: alias git=hub
