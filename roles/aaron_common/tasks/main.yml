@@ -9,3 +9,6 @@
 
 - name: Configure dotfiles
   include: dotfiles.yml
+
+- name: Configure dev
+  include: dev.yml

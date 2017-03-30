@@ -17,6 +17,7 @@ homebrew_packages:
   - fswatch
   - gawk
   - git
+  - go
   - gpg
   - hub
   - homebrew/dupes/srm

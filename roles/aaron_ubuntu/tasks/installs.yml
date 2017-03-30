@@ -38,3 +38,24 @@
   git:
     repo: 'https://github.com/zplug/zplug'
     dest: ~/.zplug
+
+# Install golang
+- name: check if golang exists
+  local_action:
+    module: stat
+    path: /usr/local/go/bin
+  register: gobin_exists
+
+- name: install golang
+  unarchive:
+    src: https://storage.googleapis.com/golang/go1.8.linux-amd64.tar.gz
+    dest: /usr/local
+    remote_src: True
+  become: true
+  when: not gobin_exists
+
+- name: include golang bin in system-wide path
+  lineinfile:
+    dest: /etc/profile
+    line: export PATH=$PATH:/usr/local/go/bin
+  become: true

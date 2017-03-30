@@ -1,0 +1,10 @@
+# golang
+- name: create local golang directory
+  file:
+    path: ~/go
+    state: directory
+
+- name: include local golang bin in path
+  lineinfile:
+    dest: ~/.profile
+    line: export PATH=$PATH:$HOME/go/bin
