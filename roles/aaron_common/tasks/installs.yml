@@ -1,0 +1,65 @@
+# pip3 packages
+- name: Install pip packages
+  pip:
+    name: '{{ item }}'
+    state: latest
+    executable: pip3
+  with_items: '{{ pip_packages }}'
+  tags:
+    - pip
+
+
+# npm packages
+- name: Install non-root npm packages
+  npm:
+    name: '{{ item.name }}'
+    state: latest
+    global: yes
+  with_items: '{{ npm_packages }}'
+  when: not item.root
+  tags:
+    - npm
+
+- name: Install root npm packages (Linux)
+  npm:
+    name: '{{ item.name }}'
+    state: latest
+    global: yes
+  with_items: '{{ npm_packages }}'
+  when: ansible_system == 'Linux' and item.root
+  become: yes
+  tags:
+    - npm
+
+- name: Install root npm packages (OSX)
+  npm:
+    name: '{{ item.name }}'
+    state: latest
+    global: yes
+  with_items: '{{ npm_packages }}'
+  when: ansible_system == 'Darwin' and item.root
+  tags:
+    - npm
+
+
+# Gem packages
+- name: Install gem packages (Linux)
+  gem:
+    name: '{{ item }}'
+    state: latest
+    user_install: no
+  with_items: '{{ gem_packages }}'
+  become: yes
+  when: ansible_system == 'Linux'
+  tags:
+    - gem
+
+- name: Install gem packages (OSX)
+  gem:
+    name: '{{ item }}'
+    state: latest
+    user_install: no
+  with_items: '{{ gem_packages }}'
+  when: ansible_system == 'Darwin'
+  tags:
+    - gem

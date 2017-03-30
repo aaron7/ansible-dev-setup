@@ -1,4 +1,31 @@
 ---
+pip_packages:
+  - awscli
+  - boto
+  - boto3
+  - csvkit
+  - ec2-ssh-yplan
+  - flake8
+  - ipdb
+  - ipython
+  - pip-tools
+  - pycodestyle
+  - pygments
+  - pythonpy
+  - pyyaml
+  - requests
+  - six
+  - tox
+  - virtualenvwrapper
+
+npm_packages:
+  - name: yarn
+    root: True
+
+gem_packages:
+  - jekyll
+  - tmuxinator
+
 vscode_extensions:
   - dbaeumer.vscode-eslint
   - deerawan.vscode-dash

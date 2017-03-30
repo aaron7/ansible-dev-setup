@@ -1,3 +1,14 @@
+# Install apt keys and repositories
+- apt_key:
+    url: '{{ item }}'
+  with_items: '{{ apt_keys }}'
+  become: true
+
+- apt_repository:
+    repo: '{{ item }}'
+  with_items: '{{ apt_repositories }}'
+  become: true
+
 # Install apt packages
 - name: apt packages
   apt:

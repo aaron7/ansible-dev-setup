@@ -1,3 +1,6 @@
+- name: Install things
+  include: installs.yml
+
 - name: Setup VSCode
   include: vscode.yml
 

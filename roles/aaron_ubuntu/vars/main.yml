@@ -1,11 +1,23 @@
 ---
+apt_keys:
+  - https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+
+apt_repositories:
+  - 'deb https://deb.nodesource.com/node_6.x {{ ansible_distribution_release }} main'
+
 apt_packages:
+  - curl
   - git
   - keepassx
+  - nodejs
   - p7zip-full
   - python3
+  - python3-pip
+  - python-pip
   - redshift
   - redshift-gtk
+  - ruby-full
+  - rubygems
   - tmux
 
 deb_uris:
