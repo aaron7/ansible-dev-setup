@@ -24,6 +24,7 @@ homebrew_packages:
   - jpeg
   - jpegoptim
   - jq
+  - knqyf263/pet/pet
   - lesspipe
   - libpng
   - libtool
@@ -31,6 +32,7 @@ homebrew_packages:
   - ncdu
   - node
   - openssl
+  - peco
   - percona-toolkit
   - pkg-config
   - pngcrush
@@ -39,6 +41,7 @@ homebrew_packages:
   - python
   - python3
   - readline
+  - ripgrep
   - rtmpdump
   - ruby
   - ruby-build
