@@ -25,7 +25,7 @@ ansible-playbook playbook.yml -K
 
 ## What's included?
 
-- Packages (brew/cask or apt/deb)
+- Packages (brew/cask or apt/deb) + pip/npm/gem/golang
 - VSCode config (+ extension sync)
 - Some ubuntu hardware config
 - Git config

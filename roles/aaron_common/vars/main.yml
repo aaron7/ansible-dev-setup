@@ -25,6 +25,9 @@ gem_packages:
   - jekyll
   - tmuxinator
 
+golang_packages:
+  - github.com/github/hub
+
 vscode_extensions:
   - dbaeumer.vscode-eslint
   - deerawan.vscode-dash

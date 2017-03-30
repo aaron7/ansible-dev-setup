@@ -46,3 +46,9 @@
   become: yes
   when: ansible_system == 'Linux'
   tags: gem
+
+# golang
+- name: Install golang packages
+  command: go get {{ item }}
+  with_items: '{{ golang_packages }}'
+  tags: golang
