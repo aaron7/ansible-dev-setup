@@ -18,9 +18,8 @@ pip_packages:
   - tox
   - virtualenvwrapper
 
-npm_packages:
-  - name: yarn
-    root: True
+npm_root_packages:
+  - yarn
 
 gem_packages:
   - jekyll

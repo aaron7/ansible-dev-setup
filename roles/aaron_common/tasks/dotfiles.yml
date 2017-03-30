@@ -1,7 +1,8 @@
-- name: tmuxinator config directory
+# Tmuxinator
+- name: create tmuxinator config directory
   file: path='~/.tmuxinator' state=directory
 
-- name: tmuxinator config
+- name: link tmuxinator session configurations
   file:
     src: '{{ ansible_env.PWD }}/roles/aaron_common/files/tmuxinator/{{ item }}'
     path: '~/.tmuxinator/{{ item }}'

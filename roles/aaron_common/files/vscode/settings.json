@@ -1,6 +1,6 @@
 // Place your settings in this file to overwrite the default settings
 {
-   // "editor.fontFamily": "Operator Mono",
+    "editor.fontFamily": "Operator Mono",
     "editor.fontWeight": "100",
     "editor.fontSize": 14,
 

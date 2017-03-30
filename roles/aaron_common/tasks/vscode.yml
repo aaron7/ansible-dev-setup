@@ -9,24 +9,24 @@
   when: item not in vscode_installed_extensions.stdout_lines
 
 # Link VSCode keybindings.json and settings.json
-- when: ansible_system == 'Darwin'
-  name: link vscode settings.json
+- name: link vscode keybindings.json and settings.json (OSX)
   file:
-    src: '{{ ansible_env.PWD }}/roles/aaron_common/files/vscode_{{ item }}'
+    src: '{{ ansible_env.PWD }}/roles/aaron_common/files/vscode/{{ item }}'
     path: '~/Library/Application Support/Code/User/{{ item }}'
     state: link
     force: yes
   with_items:
     - keybindings.json
     - settings.json
+  when: ansible_system == 'Darwin'
 
-- when: ansible_system == 'Linux'
-  name: link vscode settings.json
+- name: link vscode keybindings.json and settings.json (Linux)
   file:
-    src: '{{ ansible_env.PWD }}/roles/aaron_common/files/vscode_{{ item }}'
+    src: '{{ ansible_env.PWD }}/roles/aaron_common/files/vscode/{{ item }}'
     path: '~/.config/Code/User/{{ item }}'
     state: link
     force: yes
   with_items:
     - keybindings.json
     - settings.json
+  when: ansible_system == 'Linux'

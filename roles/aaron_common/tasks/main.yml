@@ -1,11 +1,11 @@
-- name: Install things
+- name: Install common packages (pip, npm, gem)
   include: installs.yml
 
-- name: Setup VSCode
+- name: Configure VSCode
   include: vscode.yml
 
-- name: Setup git
+- name: Configure git
   include: git.yml
 
-- name: Setup dotfiles
+- name: Configure dotfiles
   include: dotfiles.yml
