@@ -1,2 +1,2 @@
-- name: Install things
+- name: Install OSX packages
   include: installs.yml

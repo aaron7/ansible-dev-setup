@@ -1,33 +1,26 @@
-- name: homebrew taps
-  homebrew_tap:
+# Homebrew
+- homebrew_tap:
     tap: '{{ item }}'
   with_items: '{{ homebrew_taps }}'
-  tags:
-    - brew
+  tags: brew
 
-- name: Update homebrew
-  homebrew:
+- homebrew:
     name: git
     state: latest
     update_homebrew: yes
-  tags:
-    - brew
+  tags: brew
 
-- name: Install homebrew packages
-  homebrew:
+- homebrew:
     name: '{{ item }}'
     state: latest
   with_items: '{{ homebrew_packages }}'
-  tags:
-    - brew
+  tags: brew
 
-- name: Install homebrew cask packages
-  homebrew_cask:
+- homebrew_cask:
     name: '{{ item }}'
     state: installed
   with_items: '{{ homebrew_cask_packages }}'
-  tags:
-    - brew
+  tags: brew
 
 
 # Install keepassx directly from site (without cask just to be safe)
@@ -58,3 +51,4 @@
 
 - command: hdiutil detach ./tmp/KeePassX-2.0.3/
   when: keepassx_exists.stat.exists == False
+# End keepassx installation
