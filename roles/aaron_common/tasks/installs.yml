@@ -10,7 +10,7 @@
 # npm
 - name: Install root npm packages (OSX)
   npm:
-    name: '{{ item.name }}'
+    name: '{{ item }}'
     state: latest
     global: yes
   with_items: '{{ npm_root_packages }}'
@@ -19,7 +19,7 @@
 
 - name: Install root npm packages (Linux)
   npm:
-    name: '{{ item.name }}'
+    name: '{{ item }}'
     state: latest
     global: yes
   with_items: '{{ npm_root_packages }}'
