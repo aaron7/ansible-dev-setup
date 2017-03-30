@@ -3,3 +3,6 @@
 
 - name: Setup git
   include: git.yml
+
+- name: Setup dotfiles
+  include: dotfiles.yml

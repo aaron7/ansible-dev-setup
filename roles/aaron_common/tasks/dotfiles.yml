@@ -1,0 +1,8 @@
+- name: tmuxinator config
+  file:
+    src: '{{ ansible_env.PWD }}/roles/aaron_common/files/tmuxinator/{{ item }}'
+    path: '~/.tmunixator/{{ item }}'
+    state: link
+  with_items:
+    - projects.yml
+    - vertical.yml
