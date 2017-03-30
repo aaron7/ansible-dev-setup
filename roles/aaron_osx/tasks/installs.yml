@@ -52,3 +52,33 @@
     state: latest
   with_items: '{{ gem_packages }}'
   tags: [gem]
+
+
+# Install keepassx directly from site (without cask just to be safe)
+- local_action: stat path=/Applications/KeePassX.app
+  register: keepassx_exists
+
+- name: Import keepassx public key
+  shell: 'gpg --import {{ ansible_env.PWD }}/aaron_osx/files/keys/keepassx-public-key-83135D45.asc'
+  when: keepassx_exists.stat.exists == False
+
+- name: Download KeePassX-2.0.3.dmg
+  get_url:
+    url: https://www.keepassx.org/releases/2.0.3/KeePassX-2.0.3.dmg
+    dest: /tmp/KeePassX-2.0.3.dmg
+  when: keepassx_exists.stat.exists == False
+
+- name: Verify signature
+  shell: 'gpg --verify {{ ansible_env.PWD }}/aaron_osx/files/KeePassX-2.0.3.dmg.sig /tmp/KeePassX-2.0.3.dmg'
+  register: keepassx-verify-sig-output
+  failed_when: "'Good signature from \"Felix Geyer <felix@fobos.de>\"' not in keepassx-verify-sig-output.stdout"
+  when: keepassx_exists.stat.exists == False
+
+- command: hdiutil attach ./tmp/KeePassX-2.0.3.dmg -nobrowse -mountpoint ./tmp/KeePassX-2.0.3
+  when: keepassx_exists.stat.exists == False
+
+- shell: cp -aR ./tmp/KeePassX-2.0.3/KeePassX.app /Applications/KeePassX.app
+  when: keepassx_exists.stat.exists == False
+
+- command: hdiutil detach ./tmp/KeePassX-2.0.3/
+  when: keepassx_exists.stat.exists == False
