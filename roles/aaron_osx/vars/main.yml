@@ -45,6 +45,7 @@ homebrew_packages:
   - ruby-install
   - shellcheck
   - sqlite
+  - tmux
   - tree
   - watch
   - wget
@@ -103,3 +104,4 @@ npm_packages:
 
 gem_packages:
   - jekyll
+  - tmuxinator

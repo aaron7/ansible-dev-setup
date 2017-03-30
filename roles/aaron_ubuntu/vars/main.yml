@@ -6,6 +6,7 @@ apt_packages:
   - python3
   - redshift
   - redshift-gtk
+  - tmux
 
 deb_uris:
   - name: code
