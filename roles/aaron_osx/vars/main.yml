@@ -75,6 +75,7 @@ homebrew_cask_packages:
   - skype
   - steam
   - sublime-text
+  - teamviewer
   - texmaker
   - visual-studio-code
   - vlc
