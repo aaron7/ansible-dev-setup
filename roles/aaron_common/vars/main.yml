@@ -33,6 +33,7 @@ vscode_extensions:
   - deerawan.vscode-dash
   - donjayamanne.python
   - EditorConfig.EditorConfig
+  - haaaad.ansible
   - HookyQR.beautify
   - jdforsythe.add-new-line-to-files
   - lukehoban.Go
