@@ -1,5 +1,5 @@
-- name: Setup hardware
+- name: Setup ubuntu hardware
   include: hardware.yml
 
-- name: Install things
+- name: Install ubuntu packages
   include: installs.yml

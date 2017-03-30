@@ -3,34 +3,32 @@
     url: '{{ item }}'
   with_items: '{{ apt_keys }}'
   become: true
+  tags: apt
 
 - apt_repository:
     repo: '{{ item }}'
   with_items: '{{ apt_repositories }}'
   become: true
+  tags: apt
 
 # Install apt packages
-- name: apt packages
-  apt:
+- apt:
     name: '{{ item }}'
   with_items: '{{ apt_packages }}'
   become: true
-  tags:
-    - apt
+  tags: apt
 
-# Install deb packages from uris, if not already installed
-- name: deb uris check
+# Install deb packages from uris
+- name: check if deb packages already installed
   shell: dpkg -s '{{ item.name }}' | grep 'install ok installed' || true
-  register: deb_uris_check_result
   with_items: '{{ deb_uris }}'
-  tags:
-    - apt
+  register: deb_uris_check_result
+  tags: apt
 
-- name: deb uris install missing
+- name: install missing deb packages
   apt:
     deb: '{{ item.1.uri }}'
   with_indexed_items: '{{ deb_uris }}'
   when: deb_uris_check_result.results[{{ item.0 }}].stdout == ""
   become: true
-  tags:
-    - apt
+  tags: apt
