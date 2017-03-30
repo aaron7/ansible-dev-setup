@@ -29,3 +29,4 @@ ansible-playbook playbook.yml -K
 - VSCode config (+ extension sync)
 - Some ubuntu hardware config
 - Git config
+- Dotfiles
