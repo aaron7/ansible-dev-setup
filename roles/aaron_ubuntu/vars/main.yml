@@ -19,6 +19,7 @@ apt_packages:
   - ruby-full
   - rubygems
   - tmux
+  - xclip
 
 deb_uris:
   - name: code
