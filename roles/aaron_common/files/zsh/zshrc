@@ -12,10 +12,44 @@ fi
 source ~/.zplug/init.zsh
 
 #########################
-
 # Plugins
-zplug "zsh-users/zsh-syntax-highlighting"
+#########################
 
+# syntax highlighting and substring search
+zplug "zsh-users/zsh-syntax-highlighting"
+zplug "zsh-users/zsh-history-substring-search"
+
+# fish-like auto suggestions
+zplug "zsh-users/zsh-autosuggestions", from:github
+
+# extra auto completions
+zplug "zsh-users/zsh-completions", from:github
+
+# osx helpers
+zplug "unixorn/tumult.plugin.zsh", from:github
+
+# warn when running command you have an alias for
+zplug "djui/alias-tips", from:github
+
+# git helper scripts
+zplug "unixorn/git-extra-commands", from:github
+
+# sysadmin helpers
+zplug "skx/sysadmin-util", from:github
+
+# open branch/files in github
+zplug "peterhurford/git-it-on.zsh", from:github
+
+# Prezto theme and plugins
+zstyle ':prezto:module:*' color 'yes'
+zstyle ':prezto:module:*' case-sensitive 'no'
+zstyle ':prezto:module:prompt' theme sorin
+zplug "modules/prompt", from:prezto
+zplug "modules/directory", from:prezto
+zplug "modules/editor", from:prezto
+zplug "modules/git", from:prezto
+zplug "modules/history", from:prezto
+zplug "modules/utility", from:prezto
 
 #########################
 
