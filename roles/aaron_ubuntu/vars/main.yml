@@ -1,9 +1,14 @@
 ---
-apt_keys:
+apt_key_urls:
   - https://deb.nodesource.com/gpgkey/nodesource.gpg.key
 
+apt_key_ids:
+  - keyserver: hkp://keyserver.ubuntu.com:80
+    id: BBEBDCB318AD50EC6865090613B00F1FD2C19886
+
 apt_repositories:
-  - 'deb https://deb.nodesource.com/node_6.x {{ ansible_distribution_release }} main'
+  - deb https://deb.nodesource.com/node_6.x {{ ansible_distribution_release }} main
+  - deb http://repository.spotify.com stable non-free
 
 apt_packages:
   - curl
@@ -18,6 +23,7 @@ apt_packages:
   - redshift-gtk
   - ruby-full
   - rubygems
+  - spotify-client
   - tmux
   - xclip
   - zsh

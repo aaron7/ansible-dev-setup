@@ -1,6 +1,6 @@
 - name: copy magicmouse kernal module configuration
   copy:
-    src: "{{ ansible_env.PWD }}/roles/aaron_ubuntu/files/hardware/magicmouse.conf"
+    src: '{{ ansible_env.PWD }}/roles/aaron_ubuntu/files/hardware/magicmouse.conf'
     dest: /etc/modprobe.d/magicmouse.conf
     force: no
   become: true
