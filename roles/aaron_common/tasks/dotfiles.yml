@@ -21,6 +21,7 @@
     state: link
     force: yes
   with_items:
+    - tmuxinator.zsh
     - projects.yml
     - vertical.yml
   tags: dotfiles

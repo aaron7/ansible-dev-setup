@@ -11,6 +11,9 @@ fi
 # Initialise zplug
 source ~/.zplug/init.zsh
 
+# Scripts
+source ~/.tmuxinator/tmuxinator.zsh
+
 #########################
 # Plugins
 #########################
