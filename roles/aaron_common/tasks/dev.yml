@@ -1,9 +1,3 @@
-# aliases
-- name: alias hub as git
-  lineinfile:
-    dest: ~/.profile
-    line: alias git=hub
-
 # golang
 - name: create local golang directory
   file:

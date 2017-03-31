@@ -11,7 +11,11 @@ fi
 # Initialise zplug
 source ~/.zplug/init.zsh
 
+#########################
 # Scripts
+#########################
+
+# Tmuxinator autocomplete and mux alias
 source ~/.tmuxinator/tmuxinator.zsh
 
 #########################
@@ -53,6 +57,13 @@ zplug "modules/editor", from:prezto
 zplug "modules/git", from:prezto
 zplug "modules/history", from:prezto
 zplug "modules/utility", from:prezto
+
+#########################
+# Aliases
+#########################
+
+# Alias git to github's hub
+alias git=hub
 
 #########################
 
