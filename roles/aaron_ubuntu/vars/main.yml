@@ -25,6 +25,7 @@ apt_packages:
   - rubygems
   - spotify-client
   - tmux
+  - vlc
   - xclip
   - zsh
 
