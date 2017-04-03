@@ -1,8 +1,7 @@
 // Place your settings in this file to overwrite the default settings
 {
-    "editor.fontFamily": "Operator Mono",
     "editor.fontWeight": "100",
-    "editor.fontSize": 15,
+    "editor.fontSize": 14,
 
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
@@ -10,6 +9,6 @@
     "trailing-spaces.trimOnSave": true,
     "editor.rulers": [80, 120],
     "javascript.validate.enable": false,
-    "window.zoomLevel": 0,
+    "window.zoomLevel": 1,
     "workbench.colorTheme": "Oceanic Next Italic"
 }
