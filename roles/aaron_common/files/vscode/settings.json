@@ -2,7 +2,7 @@
 {
     "editor.fontFamily": "Operator Mono",
     "editor.fontWeight": "100",
-    "editor.fontSize": 14,
+    "editor.fontSize": 15,
 
     "python.linting.pylintEnabled": false,
     "python.linting.flake8Enabled": true,
