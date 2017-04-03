@@ -78,6 +78,7 @@ homebrew_cask_packages:
   - sequel-pro
   - skim
   - skype
+  - slack
   - spotify
   - steam
   - sublime-text
