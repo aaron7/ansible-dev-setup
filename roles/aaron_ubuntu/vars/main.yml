@@ -1,6 +1,7 @@
 ---
 apt_key_urls:
   - https://deb.nodesource.com/gpgkey/nodesource.gpg.key
+  - https://packages.cloud.google.com/apt/doc/apt-key.gpg
 
 apt_key_ids:
   - keyserver: hkp://keyserver.ubuntu.com:80
@@ -9,11 +10,17 @@ apt_key_ids:
 apt_repositories:
   - deb https://deb.nodesource.com/node_6.x {{ ansible_distribution_release }} main
   - deb http://repository.spotify.com stable non-free
+  - deb http://apt.kubernetes.io/ kubernetes-xenial main
 
 apt_packages:
   - curl
+  - docker.io
   - git
   - keepassx
+  - kubeadm
+  - kubectl
+  - kubelet
+  - kubernetes-cni
   - nodejs
   - p7zip-full
   - python3
@@ -26,6 +33,7 @@ apt_packages:
   - spotify-client
   - tmux
   - vlc
+  - virtualbox
   - xclip
   - zsh
 
