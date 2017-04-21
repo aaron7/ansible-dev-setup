@@ -67,6 +67,7 @@ homebrew_cask_packages:
   - firefox
   - flux
   - franz
+  - gimp
   - google-chrome
   - iterm2
   - karabiner
