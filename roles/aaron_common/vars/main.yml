@@ -29,6 +29,7 @@ gem_packages:
 golang_packages:
   - github.com/derekparker/delve/cmd/dlv
   - github.com/github/hub
+  - github.com/golang/dep/...
 
 vscode_extensions:
   - dbaeumer.vscode-eslint
