@@ -27,6 +27,7 @@ gem_packages:
   - tmuxinator
 
 golang_packages:
+  - github.com/FiloSottile/gvt
   - github.com/derekparker/delve/cmd/dlv
   - github.com/github/hub
   - github.com/golang/dep/...
