@@ -10,5 +10,6 @@
     "editor.rulers": [80, 120],
     "javascript.validate.enable": false,
     "window.zoomLevel": 1,
-    "workbench.colorTheme": "Oceanic Next Italic"
+    "workbench.colorTheme": "Oceanic Next Italic",
+    "gitProjectManager.baseProjectsFolders": ["~/projects"]
 }
