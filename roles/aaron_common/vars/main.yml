@@ -48,6 +48,7 @@ vscode_extensions:
   - misogi.ruby-rubocop
   - mohsen1.prettify-json
   - rebornix.Ruby
+  - robertohuertasm.vscode-icons
   - shanoor.vscode-nginx
   - shardulm94.trailing-spaces
   - shinnn.stylelint
