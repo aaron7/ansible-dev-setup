@@ -11,5 +11,8 @@
     "javascript.validate.enable": false,
     "window.zoomLevel": 1,
     "workbench.colorTheme": "Oceanic Next Italic",
-    "gitProjectManager.baseProjectsFolders": ["~/projects"]
+    "gitProjectManager.baseProjectsFolders": [
+        "~/projects"
+    ],
+    "workbench.iconTheme": "vs-seti"
 }
