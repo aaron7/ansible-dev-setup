@@ -19,7 +19,6 @@ homebrew_packages:
   - git
   - go
   - gpg
-  - homebrew/dupes/srm
   - imagemagick
   - jhead
   - jpeg
