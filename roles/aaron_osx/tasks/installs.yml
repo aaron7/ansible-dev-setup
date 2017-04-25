@@ -43,15 +43,15 @@
   register: keepassx_verify_sig_output
   failed_when: >
     'Good signature from "Felix Geyer <felix@fobos.de>"'
-    not in keepassx_verify_sig_output.stdout
+    not in keepassx_verify_sig_output.stderr
   when: keepassx_exists.stat.exists == False
 
-- command: hdiutil attach ./tmp/KeePassX-2.0.3.dmg -nobrowse -mountpoint ./tmp/KeePassX-2.0.3
+- command: hdiutil attach /tmp/KeePassX-2.0.3.dmg -nobrowse -mountpoint /tmp/KeePassX-2.0.3
   when: keepassx_exists.stat.exists == False
 
-- shell: cp -aR ./tmp/KeePassX-2.0.3/KeePassX.app /Applications/KeePassX.app
+- shell: cp -aR /tmp/KeePassX-2.0.3/KeePassX.app /Applications/KeePassX.app
   when: keepassx_exists.stat.exists == False
 
-- command: hdiutil detach ./tmp/KeePassX-2.0.3/
+- command: hdiutil detach /tmp/KeePassX-2.0.3/
   when: keepassx_exists.stat.exists == False
 # End keepassx installation
