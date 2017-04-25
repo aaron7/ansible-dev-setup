@@ -8,7 +8,7 @@ Inspired by Adam Johnson's [mac-ansible](https://github.com/adamchainz/mac-ansib
 
 ### OSX:
 
-1. Install [homebrew](brew.sh)
+1. Install [homebrew](https://brew.sh)
 2. `brew install python` (it's better than system python, see [guide](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md))
 3. `pip install ansible` (better than homebrew package as it's always latest)
 4. `ansible-playbook playbook.yml`
