@@ -63,6 +63,7 @@ homebrew_cask_packages:
   - calibre
   - dash
   - disk-inventory-x
+  - dropbox
   - firefox
   - flux
   - franz
