@@ -8,3 +8,4 @@
   lineinfile:
     dest: ~/.profile
     line: export PATH=$PATH:$HOME/go/bin
+    create: yes
