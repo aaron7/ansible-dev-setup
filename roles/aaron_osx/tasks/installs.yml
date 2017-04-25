@@ -29,7 +29,7 @@
   register: keepassx_exists
 
 - name: Import keepassx public key
-  shell: gpg --import {{ ansible_env.PWD }}/aaron_osx/files/keys/keepassx-public-key-83135D45.asc
+  shell: gpg --import {{ ansible_env.PWD }}/roles/aaron_osx/files/keepassx-public-key-83135D45.asc
   when: keepassx_exists.stat.exists == False
 
 - name: Download KeePassX-2.0.3.dmg
@@ -39,7 +39,7 @@
   when: keepassx_exists.stat.exists == False
 
 - name: Verify signature
-  shell: gpg --verify {{ ansible_env.PWD }}/aaron_osx/files/KeePassX-2.0.3.dmg.sig /tmp/KeePassX-2.0.3.dmg
+  shell: gpg --verify {{ ansible_env.PWD }}/roles/aaron_osx/files/KeePassX-2.0.3.dmg.sig /tmp/KeePassX-2.0.3.dmg
   register: keepassx_verify_sig_output
   failed_when: >
     'Good signature from "Felix Geyer <felix@fobos.de>"'
