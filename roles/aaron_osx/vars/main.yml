@@ -70,7 +70,6 @@ homebrew_cask_packages:
   - google-chrome
   - iterm2
   - karabiner
-  - keepassx
   - mactex
   - mplayerx
   - paintbrush
