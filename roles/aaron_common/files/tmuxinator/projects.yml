@@ -1,7 +1,7 @@
 # ~/.tmuxinator/projects.yml
 
 name: projects
-root: ~/projects
+root: ~/
 
 # Optional tmux socket
 # socket_name: foo
@@ -31,20 +31,21 @@ root: ~/projects
 # post: tmux -CC attach -t backend
 
 windows:
-  - dev:
-      layout: 1e5c,181x44,0,0{59x44,0,0,1,59x44,60,0,3,61x44,120,0[61x27,120,0,4,61x16,120,28,5]}
-      panes:
-        -
-        - cd ~/go
-        -
-        -
-  - console:
+  - general:
       layout: even-horizontal
       panes:
         -
         -
-  - other:
+        -
+  - projects:
       layout: even-horizontal
       panes:
-        -
-        -
+        - cd ~/projects
+        - cd ~/projects
+        - cd ~/projects
+  - go:
+      layout: even-horizontal
+      panes:
+        - cd ~/go/src/github.com
+        - cd ~/go/src/github.com
+        - cd ~/go/src/github.com
