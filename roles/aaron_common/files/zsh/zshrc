@@ -1,5 +1,5 @@
 #########################
-###### Using zplug ######
+# zplug
 #########################
 
 # Check if zplug is installed
@@ -10,17 +10,6 @@ fi
 
 # Initialise zplug
 source ~/.zplug/init.zsh
-
-#########################
-# Scripts
-#########################
-
-# Tmuxinator autocomplete and mux alias
-source ~/.tmuxinator/tmuxinator.zsh
-
-#########################
-# Plugins
-#########################
 
 # syntax highlighting and substring search
 zplug "zsh-users/zsh-syntax-highlighting"
@@ -58,15 +47,6 @@ zplug "modules/git", from:prezto
 zplug "modules/history", from:prezto
 zplug "modules/utility", from:prezto
 
-#########################
-# Aliases
-#########################
-
-# Alias git to github's hub without breaking completions
-function git(){hub $@}
-
-#########################
-
 # Install packages that have not been installed yet
 if ! zplug check --verbose; then
     printf "Install? [y/N]: "
@@ -78,3 +58,27 @@ if ! zplug check --verbose; then
 fi
 
 zplug load
+
+#########################
+# Scripts
+#########################
+
+# Kubectl autocomplete
+source <(kubectl completion zsh)
+
+# Tmuxinator autocomplete and mux alias
+source ~/.tmuxinator/tmuxinator.zsh
+
+#########################
+# Aliases
+#########################
+
+# Alias git to github's hub without breaking completions
+function git(){hub $@}
+
+#########################
+# Paths
+#########################
+
+# golang
+export PATH=$PATH:$HOME/go/bin
