@@ -17,6 +17,9 @@ apt_packages:
   - docker.io
   - gimp
   - git
+  - hledger
+  - hledger-ui
+  - hledger-web
   - keepassx
   - kubeadm
   - kubectl
