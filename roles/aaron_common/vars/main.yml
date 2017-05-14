@@ -16,9 +16,12 @@ pip_packages:
   - requests
   - six
   - tox
+  - truffleHog
   - virtualenvwrapper
 
 npm_root_packages:
+  - eslint
+  - n
   - yarn
 
 gem_packages:

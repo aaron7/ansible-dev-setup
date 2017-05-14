@@ -8,6 +8,7 @@ homebrew_packages:
   - autojump
   - automake
   - cloc
+  - colordiff
   - coreutils
   - cowsay
   - exiftool
@@ -50,6 +51,7 @@ homebrew_packages:
   - ruby-install
   - shellcheck
   - sqlite
+  - terraform
   - tmux
   - tree
   - watch
