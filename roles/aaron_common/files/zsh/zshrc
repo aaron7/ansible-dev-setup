@@ -82,3 +82,6 @@ function git(){hub $@}
 
 # golang
 export PATH=$PATH:$HOME/go/bin
+
+# .local/bin
+export PATH=$PATH:/Users/aaron/.local/bin
