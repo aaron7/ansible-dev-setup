@@ -16,5 +16,6 @@
         "~/projects",
         "~/go/src/github.com"
     ],
-    "workbench.iconTheme": "vs-seti"
+    "workbench.iconTheme": "vs-seti",
+    "typescript.check.npmIsInstalled": false
 }
