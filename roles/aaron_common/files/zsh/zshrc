@@ -76,6 +76,9 @@ source ~/.tmuxinator/tmuxinator.zsh
 # Alias git to github's hub without breaking completions
 function git(){hub $@}
 
+# hledger
+alias hl=hledger
+
 #########################
 # Paths
 #########################
