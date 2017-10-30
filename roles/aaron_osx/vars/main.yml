@@ -7,6 +7,7 @@ homebrew_packages:
   - autoconf
   - autojump
   - automake
+  - bazel
   - cloc
   - colordiff
   - coreutils
@@ -19,8 +20,12 @@ homebrew_packages:
   - gawk
   - git
   - go
+  - go-delve/delve/delve
   - gpg
+  - grafana
+  - graphviz
   - hledger
+  - htop
   - imagemagick
   - jhead
   - jpeg
