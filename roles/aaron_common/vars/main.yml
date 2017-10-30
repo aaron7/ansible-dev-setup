@@ -39,18 +39,27 @@ golang_packages:
 vscode_extensions:
   - EditorConfig.EditorConfig
   - HookyQR.beautify
+  - Orta.vscode-jest
   - PeterJausovec.vscode-docker
   - SintrumIT.theme-oceanic-next-italic
   - Tyriar.sort-lines
+  - caarlos0.language-prometheus
   - dbaeumer.vscode-eslint
   - deerawan.vscode-dash
   - donjayamanne.python
+  - esbenp.prettier-vscode
   - felipecaputo.git-project-manager
   - haaaad.ansible
+  - hackwaly.ocaml
   - jdforsythe.add-new-line-to-files
+  - jpoissonnier.vscode-styled-components
+  - justusadam.language-haskell
   - lukehoban.Go
+  - mauve.terraform
   - misogi.ruby-rubocop
   - mohsen1.prettify-json
+  - ms-vscode.azure-account
+  - ms-vscode.cpptools
   - rebornix.Ruby
   - shanoor.vscode-nginx
   - shardulm94.trailing-spaces
