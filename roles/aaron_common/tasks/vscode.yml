@@ -2,11 +2,13 @@
 - name: Get VSCode installed extensions
   shell: code --list-extensions
   register: vscode_installed_extensions
+  tags: vscode
 
 - name: Install missing VSCode extensions
   shell: code --install-extension {{ item }}
   when: item not in vscode_installed_extensions.stdout_lines
   with_items: '{{ vscode_extensions }}'
+  tags: vscode
 
 # Link VSCode keybindings.json and settings.json
 - name: link vscode keybindings.json and settings.json (OSX)
@@ -19,6 +21,7 @@
     - keybindings.json
     - settings.json
   when: ansible_system == 'Darwin'
+  tags: vscode
 
 - name: link vscode keybindings.json and settings.json (Linux)
   file:
@@ -30,3 +33,4 @@
     - keybindings.json
     - settings.json
   when: ansible_system == 'Linux'
+  tags: vscode
