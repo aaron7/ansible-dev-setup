@@ -88,3 +88,6 @@ export PATH=$PATH:$HOME/go/bin
 
 # .local/bin
 export PATH=$PATH:/Users/aaron/.local/bin
+
+# arc
+export PATH=$PATH:/Users/aaron/projects/arc/arcanist/bin
