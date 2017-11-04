@@ -8,10 +8,15 @@ homebrew_packages:
   - autojump
   - automake
   - bazel
+  - certbot
   - cloc
   - colordiff
   - coreutils
   - cowsay
+  - delve
+  - dep
+  - docker-machine
+  - docker-machine-driver-xhyve
   - exiftool
   - fdupes
   - ffmpeg
@@ -24,6 +29,7 @@ homebrew_packages:
   - gpg
   - grafana
   - graphviz
+  - haskell-stack
   - hledger
   - htop
   - imagemagick
@@ -33,13 +39,20 @@ homebrew_packages:
   - jq
   - knqyf263/pet/pet
   - kubectl
+  - kubernetes-cli
+  - lame
+  - ledger
   - lesspipe
   - libpng
   - libtool
   - libyaml
   - ncdu
   - node
+  - ocaml
+  - ocamlbuild
+  - opam
   - openssl
+  - parallel
   - peco
   - percona-toolkit
   - pkg-config
@@ -60,12 +73,18 @@ homebrew_packages:
   - tmux
   - tree
   - watch
+  - watchman
+  - webp
   - wget
+  - x264
+  - xhyve
+  - xvid
   - xz
   - you-get
   - zplug
 
 homebrew_cask_packages:
+  - android-file-transfer
   - anki
   - arq
   - bitbar
@@ -79,7 +98,11 @@ homebrew_cask_packages:
   - franz
   - gimp
   - google-chrome
+  - google-cloud-sdk
+  - gpgtools
+  - hammerspoon
   - iterm2
+  - java
   - mactex
   - minikube
   - mplayerx
