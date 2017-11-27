@@ -69,6 +69,41 @@ source <(kubectl completion zsh)
 # Tmuxinator autocomplete and mux alias
 source ~/.tmuxinator/tmuxinator.zsh
 
+# AWS CLI MFA
+# Description: Creates the temp session profile <profile>-mfa if non-existent or expired
+# Usage: awsmfa <profile>
+# Setup:
+#     Go to https://console.aws.amazon.com/iam/home#/users
+#     search your username, click on it, go to the "Security credentials" tab,
+#     and set the value for "Assigned MFA device" as the `aws_mfa_device_arn` key
+#     in ~/.aws/credentials
+function awsmfa() {
+    if [[ -z "$1" ]]; then
+        echo "Please provide the profile as the first argument"
+        return 1
+    fi
+
+    local now=$(date +%s)
+    local mfaProfile=${1}-mfa
+    local mfaSessionExpDate=$(aws configure get aws_mfa_session_exp_date --profile $mfaProfile)
+    if [[ -n $mfaSessionExpDate ]] && [[ $now -lt $mfaSessionExpDate ]]; then
+        echo "AWS MFA already configured for this profile."
+    else
+        local mfaDeviceArn=$(aws configure get aws_mfa_device_arn --profile $1)
+        echo "Enter your MFA device's code (6 digits) and press [ENTER]:"
+        read tokenCode
+
+        # Set temporary credentials under a new <profile>-mfa profile
+        local credentials=$(aws sts get-session-token --profile $1 --serial-number "$mfaDeviceArn" --token-code "$tokenCode")
+        aws configure set aws_access_key_id "$(echo "$credentials" | jq -r .Credentials.AccessKeyId)" --profile $mfaProfile
+        aws configure set aws_secret_access_key "$(echo "$credentials" | jq -r .Credentials.SecretAccessKey)" --profile $mfaProfile
+        aws configure set aws_session_token "$(echo "$credentials" | jq -r .Credentials.SessionToken)" --profile $mfaProfile
+        mfaSessionExpDate=$(date -j -f "%Y-%m-%dT%H:%M:%SZ" $(echo "$credentials" | jq -r .Credentials.Expiration) +%s)
+        aws configure set aws_mfa_session_exp_date $mfaSessionExpDate --profile $mfaProfile
+    fi
+    echo "Your session with profile "$mfaProfile" will expire at $(date -j -f "%s" $mfaSessionExpDate +"%Y-%m-%dT%H:%M:%SZ")."
+}
+
 #########################
 # Aliases
 #########################
