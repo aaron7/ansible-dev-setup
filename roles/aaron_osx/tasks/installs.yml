@@ -22,6 +22,15 @@
   with_items: '{{ homebrew_cask_packages }}'
   tags: brew
 
+# Hammerspoon for window shortcuts
+- name: link hammerspoon config
+  file:
+    src: '{{ ansible_env.PWD }}/roles/aaron_osx/files/hammerspoon'
+    path: ~/.hammerspoon
+    state: link
+    force: yes
+  tags: dotfiles
+
 # Install keepassx directly from site (without cask just to be safe)
 - local_action:
     module: stat
@@ -29,7 +38,7 @@
   register: keepassx_exists
 
 - name: Import keepassx public key
-  shell: gpg --import {{ ansible_env.PWD }}/roles/aaron_osx/files/keepassx-public-key-83135D45.asc
+  shell: gpg --import {{ ansible_env.PWD }}/roles/aaron_osx/files/keepassx/keepassx-public-key-83135D45.asc
   when: keepassx_exists.stat.exists == False
 
 - name: Download KeePassX-2.0.3.dmg
@@ -39,7 +48,7 @@
   when: keepassx_exists.stat.exists == False
 
 - name: Verify signature
-  shell: gpg --verify {{ ansible_env.PWD }}/roles/aaron_osx/files/KeePassX-2.0.3.dmg.sig /tmp/KeePassX-2.0.3.dmg
+  shell: gpg --verify {{ ansible_env.PWD }}/roles/aaron_osx/files/keepassx/KeePassX-2.0.3.dmg.sig /tmp/KeePassX-2.0.3.dmg
   register: keepassx_verify_sig_output
   failed_when: >
     'Good signature from "Felix Geyer <felix@fobos.de>"'
