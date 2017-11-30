@@ -23,7 +23,6 @@ npm_root_packages:
   - eslint
   - n
   - standard
-  - yarn
 
 gem_packages:
   - bundler
