@@ -1,19 +1,18 @@
 ---
 homebrew_taps:
-  - caskroom/cask
-  - caskroom/fonts
+  - homebrew/cask
+  - homebrew/cask-fonts
+  - homebrew/cask-versions
 
 homebrew_packages:
   - autoconf
   - autojump
   - automake
-  - bazel
   - certbot
   - cloc
   - colordiff
   - coreutils
   - cowsay
-  - delve
   - dep
   - docker-machine
   - docker-machine-driver-xhyve
@@ -25,7 +24,6 @@ homebrew_packages:
   - gawk
   - git
   - go
-  - go-delve/delve/delve
   - gpg
   - grafana
   - graphviz
@@ -94,7 +92,7 @@ homebrew_cask_packages:
   - disk-inventory-x
   - docker
   - dropbox
-  - firefox
+  - firefox-developer-edition
   - flux
   - franz
   - gimp
@@ -104,7 +102,6 @@ homebrew_cask_packages:
   - hammerspoon
   - iterm2
   - java
-  - mactex
   - minikube
   - mplayerx
   - paintbrush
