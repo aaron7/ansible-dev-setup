@@ -16,6 +16,12 @@
   with_items: '{{ homebrew_packages }}'
   tags: brew
 
+- homebrew:
+    name: '{{ item }}'
+    state: latest
+  with_items: '{{ homebrew_packages_thread }}'
+  tags: brew,thread
+
 - homebrew_cask:
     name: '{{ item }}'
     state: installed

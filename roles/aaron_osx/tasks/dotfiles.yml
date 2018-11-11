@@ -1,0 +1,8 @@
+# Spacemacs
+- name: link spacemacs
+  file:
+    src: '{{ ansible_env.PWD }}/roles/aaron_osx/files/spacemacs/spacemacs'
+    path: ~/.spacemacs
+    state: link
+    force: yes
+  tags: dotfilesspacemacs
