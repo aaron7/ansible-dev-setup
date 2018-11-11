@@ -115,6 +115,16 @@ function git(){hub $@}
 alias hl=hledger
 
 #########################
+# Python
+#########################
+
+export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+export WORKON_HOME=$HOME/.virtualenvs
+export PROJECT_HOME=$HOME/Devel
+export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
+source /usr/local/bin/virtualenvwrapper.sh
+
+#########################
 # Paths
 #########################
 
@@ -126,3 +136,8 @@ export PATH=$PATH:/Users/aaron/.local/bin
 
 # arc
 export PATH=$PATH:/Users/aaron/projects/arc/arcanist/bin
+
+# pyenv
+export PATH="/Users/aaron/.pyenv:$PATH"
+eval "$(pyenv init -)"
+eval "$(pyenv virtualenv-init -)"
