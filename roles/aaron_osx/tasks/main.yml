@@ -1,2 +1,5 @@
 - name: Install OSX packages
   include: installs.yml
+
+- name: Configure dotfiles
+  include: dotfiles.yml
