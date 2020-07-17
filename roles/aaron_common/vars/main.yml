@@ -1,7 +1,7 @@
 ---
 pip_packages:
   - awscli
-  - boto
+  - black
   - boto3
   - csvkit
   - ec2-ssh-yplan
@@ -14,7 +14,6 @@ pip_packages:
   - pythonpy
   - pyyaml
   - requests
-  - six
   - tox
   - truffleHog
   - virtualenvwrapper
@@ -22,14 +21,10 @@ pip_packages:
 npm_root_packages:
   - eslint
   - n
-  - standard
+  - prettier
 
 gem_packages:
-  - jekyll
   - tmuxinator
 
 golang_packages:
-  - github.com/FiloSottile/gvt
-  - github.com/derekparker/delve/cmd/dlv
-  - github.com/github/hub
-  - github.com/golang/dep/...
+  - github.com/go-delve/delve/cmd/dlv

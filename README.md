@@ -35,3 +35,4 @@ ansible-playbook playbook.yml -K
 ## What's not included?
 
 - VSCode settings (done via Setting Sync)
+- Docker (https://docs.docker.com/docker-for-mac/install/)

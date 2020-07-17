@@ -14,8 +14,6 @@ homebrew_packages:
   - coreutils
   - cowsay
   - dep
-  - docker-machine
-  - docker-machine-driver-xhyve
   - exiftool
   - fdupes
   - ffmpeg
@@ -46,19 +44,14 @@ homebrew_packages:
   - libyaml
   - ncdu
   - node
-  - ocaml
-  - ocamlbuild
-  - opam
   - openssl
   - parallel
   - peco
-  - percona-toolkit
   - pkg-config
   - pngcrush
   - postgresql
   - pypy
   - python
-  - python3
   - readline
   - ripgrep
   - rtmpdump
@@ -68,6 +61,7 @@ homebrew_packages:
   - shellcheck
   - sqlite
   - terraform
+  - the_silver_searcher
   - tmux
   - tree
   - watch
@@ -82,56 +76,41 @@ homebrew_packages:
   - you-get
   - zplug
 
+homebrew_packages_thread:
+  - libxml2
+  - ghostscript
+  - hdf5
+  - cairo
+  - pango
+  - libmemcached
+  - gmp
+  - gdk-pixbuf
+
 homebrew_cask_packages:
-  - android-file-transfer
-  - anki
   - arq
   - bitbar
-  - calibre
   - dash
   - disk-inventory-x
-  - docker
-  - dropbox
   - firefox-developer-edition
-  - flux
-  - franz
   - gimp
   - google-chrome
   - google-cloud-sdk
   - gpgtools
   - hammerspoon
   - iterm2
-  - java
-  - minikube
-  - mplayerx
-  - paintbrush
-  - playonmac
-  - sequel-pro
+  - postico
   - skim
-  - skype
-  - slack
   - spotify
-  - steam
-  - sublime-text
+  - station
   - teamviewer
   - texmaker
-  - virtualbox
   - visual-studio-code
   - vlc
   - wireshark
 
-homebrew_packages_thread:
-  - libxml2
-  - ghostscript
-  - pkg-config
-  - graphviz
-  - freetype
-  - hdf5
-  - wget
-  - cairo
-  - pango
-  - openssl
-  - python
-  - libmemcached
-  - gmp
-  - gdk-pixbuf
+homebrew_cask_packages_personal:
+  - android-file-transfer
+  - anki
+  - calibre
+  - dropbox
+  - steam

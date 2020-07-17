@@ -20,13 +20,19 @@
     name: '{{ item }}'
     state: latest
   with_items: '{{ homebrew_packages_thread }}'
-  tags: brew,thread
+  tags: never,thread
 
 - homebrew_cask:
     name: '{{ item }}'
     state: installed
   with_items: '{{ homebrew_cask_packages }}'
   tags: brew
+
+- homebrew_cask:
+    name: '{{ item }}'
+    state: installed
+  with_items: '{{ homebrew_cask_packages_personal }}'
+  tags: never,personal
 
 # Hammerspoon for window shortcuts
 - name: link hammerspoon config
