@@ -119,3 +119,19 @@ homebrew_cask_packages:
   - visual-studio-code
   - vlc
   - wireshark
+
+homebrew_packages_thread:
+  - libxml2
+  - ghostscript
+  - pkg-config
+  - graphviz
+  - freetype
+  - hdf5
+  - wget
+  - cairo
+  - pango
+  - openssl
+  - python
+  - libmemcached
+  - gmp
+  - gdk-pixbuf

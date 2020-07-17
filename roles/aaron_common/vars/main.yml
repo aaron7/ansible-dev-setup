@@ -25,7 +25,6 @@ npm_root_packages:
   - standard
 
 gem_packages:
-  - bundler
   - jekyll
   - tmuxinator
 
@@ -57,6 +56,7 @@ vscode_extensions:
   - mauve.terraform
   - misogi.ruby-rubocop
   - mohsen1.prettify-json
+  - ms-python.python
   - ms-vscode.azure-account
   - ms-vscode.cpptools
   - rebornix.Ruby

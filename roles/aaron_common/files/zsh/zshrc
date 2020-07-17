@@ -141,3 +141,9 @@ export PATH=$PATH:/Users/aaron/projects/arc/arcanist/bin
 export PATH="/Users/aaron/.pyenv:$PATH"
 eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
+
+# gettext
+export PATH="/usr/local/opt/gettext/bin:$PATH"
+
+# poetry
+export PATH=$PATH:$HOME/.poetry/bin
