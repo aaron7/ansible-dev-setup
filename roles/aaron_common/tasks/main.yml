@@ -1,9 +1,6 @@
 - name: Install common packages (pip, npm, gem, golang)
   include: installs.yml
 
-- name: Configure VSCode
-  include: vscode.yml
-
 - name: Configure git
   include: git.yml
 

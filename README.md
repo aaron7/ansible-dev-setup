@@ -26,8 +26,12 @@ ansible-playbook playbook.yml -K
 ## What's included?
 
 - Packages (brew/cask or apt/deb) + pip/npm/gem/golang
-- VSCode config (+ extension sync)
 - Some ubuntu hardware config
 - Git config
 - Dotfiles
 - zsh with [zplug](https://github.com/zplug/zplug)
+
+
+## What's not included?
+
+- VSCode settings (done via Setting Sync)
