@@ -13,6 +13,8 @@ Inspired by Adam Johnson's [mac-ansible](https://github.com/adamchainz/mac-ansib
 3. `pip install ansible` (better than homebrew package as it's always latest)
 4. `ansible-playbook playbook.yml`
 
+- Use `--tags "newuser"` if running for a new user on an existing machine setup.
+
 ### Ubuntu:
 
 ```

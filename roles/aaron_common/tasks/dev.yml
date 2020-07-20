@@ -3,9 +3,11 @@
   file:
     path: ~/go
     state: directory
+  tags: newuser
 
 - name: include local golang bin in path
   lineinfile:
     dest: ~/.profile
     line: export PATH=$PATH:$HOME/go/bin
     create: yes
+  tags: newuser

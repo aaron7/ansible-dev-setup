@@ -41,7 +41,7 @@
     path: ~/.hammerspoon
     state: link
     force: yes
-  tags: dotfiles
+  tags: dotfiles,newuser
 
 # Install keepassx directly from site (without cask just to be safe)
 - local_action:

@@ -5,4 +5,4 @@
     path: ~/.spacemacs
     state: link
     force: yes
-  tags: dotfilesspacemacs
+  tags: dotfilesspacemacs,newuser

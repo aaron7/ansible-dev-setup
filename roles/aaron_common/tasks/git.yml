@@ -2,8 +2,10 @@
     name: user.email
     scope: global
     value: aaron@aaronkirkbride.com
+  tags: newuser
 
 - git_config:
     name: user.name
     scope: global
     value: Aaron Kirkbride
+  tags: newuser

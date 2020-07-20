@@ -5,14 +5,14 @@
     path: ~/.tmux.conf
     state: link
     force: yes
-  tags: dotfiles
+  tags: dotfiles,newuser
 
 # Tmuxinator
 - name: create tmuxinator config directory
   file:
     path: ~/.tmuxinator
     state: directory
-  tags: dotfiles
+  tags: dotfiles,newuser
 
 - name: link tmuxinator session configurations
   file:
@@ -25,7 +25,7 @@
     - projects.yml
     - vertical.yml
     - work.yml
-  tags: dotfiles
+  tags: dotfiles,newuser
 
 # Vim
 - name: link vimrc
@@ -34,7 +34,7 @@
     path: ~/.vimrc
     state: link
     force: yes
-  tags: dotfiles
+  tags: dotfiles,newuser
 
 # Zsh
 - name: link zsh
@@ -43,4 +43,4 @@
     path: ~/.zshrc
     state: link
     force: yes
-  tags: dotfiles
+  tags: dotfiles,newuser
