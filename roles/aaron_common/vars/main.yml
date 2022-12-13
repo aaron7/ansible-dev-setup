@@ -4,14 +4,12 @@ pip_packages:
   - black
   - boto3
   - csvkit
-  - ec2-ssh-yplan
   - flake8
   - ipdb
   - ipython
   - pip-tools
   - pycodestyle
   - pygments
-  - pythonpy
   - pyyaml
   - requests
   - tox
@@ -27,4 +25,4 @@ gem_packages:
   - tmuxinator
 
 golang_packages:
-  - github.com/go-delve/delve/cmd/dlv
+  - github.com/go-delve/delve/cmd/dlv@latest

@@ -49,6 +49,6 @@
 
 # golang
 - name: Install golang packages
-  command: go get {{ item }}
+  command: go install {{ item }}
   with_items: '{{ golang_packages }}'
   tags: golang

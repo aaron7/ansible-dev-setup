@@ -108,11 +108,6 @@ function awsmfa() {
 # Aliases
 #########################
 
-# Alias git to github's hub without breaking completions
-function git(){hub $@}
-
-# hledger
-alias hl=hledger
 
 #########################
 # Python
@@ -121,8 +116,8 @@ alias hl=hledger
 export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
 export WORKON_HOME=$HOME/.virtualenvs
 export PROJECT_HOME=$HOME/Devel
-export VIRTUALENVWRAPPER_PYTHON=/usr/local/bin/python3
-source /usr/local/bin/virtualenvwrapper.sh
+export VIRTUALENVWRAPPER_PYTHON=$HOMEBREW_REPOSITORY/bin/python3
+source $HOMEBREW_REPOSITORY/bin/virtualenvwrapper.sh
 
 #########################
 # Paths
@@ -143,7 +138,7 @@ eval "$(pyenv init -)"
 eval "$(pyenv virtualenv-init -)"
 
 # gettext
-export PATH="/usr/local/opt/gettext/bin:$PATH"
+export PATH="$HOMEBREW_REPOSITORY/opt/gettext/bin:$PATH"
 
 # poetry
 export PATH=$PATH:$HOME/.poetry/bin

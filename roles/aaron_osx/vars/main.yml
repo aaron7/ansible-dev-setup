@@ -1,11 +1,9 @@
 ---
 homebrew_taps:
-  - homebrew/cask
   - homebrew/cask-fonts
   - homebrew/cask-versions
 
 homebrew_packages:
-  - autoconf
   - autojump
   - automake
   - certbot
@@ -13,7 +11,6 @@ homebrew_packages:
   - colordiff
   - coreutils
   - cowsay
-  - dep
   - exiftool
   - fdupes
   - ffmpeg
@@ -22,11 +19,7 @@ homebrew_packages:
   - gawk
   - git
   - go
-  - gpg
-  - grafana
   - graphviz
-  - haskell-stack
-  - hledger
   - htop
   - imagemagick
   - jhead
@@ -35,28 +28,22 @@ homebrew_packages:
   - jq
   - knqyf263/pet/pet
   - kubectl
-  - kubernetes-cli
-  - lame
-  - ledger
-  - lesspipe
   - libpng
   - libtool
   - libyaml
   - ncdu
   - node
-  - openssl
   - parallel
   - peco
   - pkg-config
   - pngcrush
   - postgresql
-  - pypy
+  - pyenv
+  - pyenv-virtualenv
   - python
-  - readline
   - ripgrep
   - rtmpdump
   - ruby
-  - ruby-build
   - ruby-install
   - shellcheck
   - sqlite
@@ -69,10 +56,8 @@ homebrew_packages:
   - webp
   - wget
   - x264
-  - xhyve
   - xvid
   - xz
-  - yarn
   - you-get
   - zplug
 
@@ -87,22 +72,16 @@ homebrew_packages_thread:
   - gdk-pixbuf
 
 homebrew_cask_packages:
-  - arq
   - bitbar
-  - dash
   - disk-inventory-x
   - firefox-developer-edition
   - gimp
   - google-chrome
   - google-cloud-sdk
-  - gpgtools
   - hammerspoon
   - iterm2
   - postico
-  - skim
   - spotify
-  - station
-  - teamviewer
   - texmaker
   - visual-studio-code
   - vlc
@@ -110,8 +89,8 @@ homebrew_cask_packages:
 
 homebrew_cask_packages_personal:
   - android-file-transfer
-  - anki
+  - arq
   - calibre
-  - dropbox
   - keepassxc
   - steam
+  - teamviewer

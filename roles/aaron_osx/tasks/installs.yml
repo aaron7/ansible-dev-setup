@@ -1,8 +1,8 @@
 # Homebrew
-# - homebrew_tap:
-#     tap: '{{ item }}'
-#   with_items: '{{ homebrew_taps }}'
-#   tags: brew
+- homebrew_tap:
+    tap: '{{ item }}'
+  with_items: '{{ homebrew_taps }}'
+  tags: brew
 
 - homebrew:
     name: git
