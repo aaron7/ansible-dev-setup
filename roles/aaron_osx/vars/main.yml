@@ -113,4 +113,5 @@ homebrew_cask_packages_personal:
   - anki
   - calibre
   - dropbox
+  - keepassxc
   - steam
