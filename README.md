@@ -10,14 +10,14 @@ Inspired by Adam Johnson's [mac-ansible](https://github.com/adamchainz/mac-ansib
 
 - [Github guide](https://docs.github.com/en/authentication/connecting-to-github-with-ssh/generating-a-new-ssh-key-and-adding-it-to-the-ssh-agent)
 
-### OSX:
+### OSX
 
 1. Install [homebrew](https://brew.sh)
 2. `brew install python` (it's better than system python, see [guide](https://github.com/Homebrew/homebrew/blob/master/share/doc/homebrew/Homebrew-and-Python.md))
 3. `pip3 install ansible` (better than homebrew package as it's always latest)
 4. `ansible-playbook playbook.yml`
 
-#### Manual acounts
+### Manual actions
 
 - Terminal: Double click `roles/aaron_common/files/term/spacegray.itermcolors` and follow instructions to use the colour preset.
 - Firefox: [Tree style tab compact dark style](https://github.com/doublejim/tree-style-tab-compact-dark-style)
@@ -25,7 +25,7 @@ Inspired by Adam Johnson's [mac-ansible](https://github.com/adamchainz/mac-ansib
 - VSCode: Sign into settings sync for extensions etc
 - Docker: https://docs.docker.com/docker-for-mac/install/
 
-### Ubuntu (not maintained):
+##### Ubuntu (not maintained)
 
 ```
 sudo apt-get install software-properties-common
@@ -34,11 +34,3 @@ sudo apt-get update
 sudo apt-get install ansible
 ansible-playbook playbook.yml -K
 ```
-
-## What's included?
-
-- Packages (brew/cask or apt/deb) + pip/npm/gem/golang
-- Some ubuntu hardware config
-- Git config
-- Dotfiles
-- zsh with [zplug](https://github.com/zplug/zplug)
