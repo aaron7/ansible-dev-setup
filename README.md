@@ -25,6 +25,8 @@ Inspired by Adam Johnson's [mac-ansible](https://github.com/adamchainz/mac-ansib
 - VSCode: Sign into settings sync for extensions etc
 - Docker: https://docs.docker.com/docker-for-mac/install/
 
+---
+
 ##### Ubuntu (not maintained)
 
 ```
