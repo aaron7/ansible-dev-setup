@@ -28,6 +28,7 @@ homebrew_packages:
   - jq
   - knqyf263/pet/pet
   - kubectl
+  - kustomize
   - libpng
   - libtool
   - libyaml
