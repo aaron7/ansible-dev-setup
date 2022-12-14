@@ -44,3 +44,29 @@
     state: link
     force: yes
   tags: dotfiles,newuser
+
+
+# Firefox
+- name: Get all firefox profile dirs
+  shell: grep 'Path=' ~/Library/Application\ Support/Firefox/profiles.ini | sed 's/^Path=//'
+  register: firefox_profile_dirs
+  when: ansible_system == 'Darwin'
+  tags: dotfiles,newuser
+
+- name: create chrome directory under profile dirs
+  file:
+    path: ~/Library/Application Support/Firefox/{{ item }}/chrome
+    state: directory
+  loop: "{{ firefox_profile_dirs.stdout_lines }}"
+  when: ansible_system == 'Darwin'
+  tags: dotfiles,newuser
+
+- name: Link userChrome.css under profile chrome dirs
+  file:
+    src: '{{ ansible_env.PWD }}/roles/aaron_common/files/firefox/userChrome.css'
+    path: ~/Library/Application Support/Firefox/{{ item }}/chrome/userChrome.css
+    state: link
+    force: yes
+  loop: "{{ firefox_profile_dirs.stdout_lines }}"
+  when: ansible_system == 'Darwin'
+  tags: dotfiles,newuser

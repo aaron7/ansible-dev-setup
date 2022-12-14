@@ -22,6 +22,7 @@ Inspired by Adam Johnson's [mac-ansible](https://github.com/adamchainz/mac-ansib
 ### Other things
 
 - Double click `roles/aaron_common/files/term/spacegray.itermcolors` and follow instructions to use the colour preset.
+- [Tree style tark compact dark style](https://github.com/doublejim/tree-style-tab-compact-dark-style)
 
 ### Ubuntu:
 
