@@ -17,14 +17,15 @@ Inspired by Adam Johnson's [mac-ansible](https://github.com/adamchainz/mac-ansib
 3. `pip3 install ansible` (better than homebrew package as it's always latest)
 4. `ansible-playbook playbook.yml`
 
-- Use `--tags "newuser"` if running for a new user on an existing machine setup.
+#### Manual acounts
 
-### Other things
+- Terminal: Double click `roles/aaron_common/files/term/spacegray.itermcolors` and follow instructions to use the colour preset.
+- Firefox: [Tree style tab compact dark style](https://github.com/doublejim/tree-style-tab-compact-dark-style)
+- Firefox: Sign in for syncing addons etc
+- VSCode: Sign into settings sync for extensions etc
+- Docker: https://docs.docker.com/docker-for-mac/install/
 
-- Double click `roles/aaron_common/files/term/spacegray.itermcolors` and follow instructions to use the colour preset.
-- [Tree style tark compact dark style](https://github.com/doublejim/tree-style-tab-compact-dark-style)
-
-### Ubuntu:
+### Ubuntu (not maintained):
 
 ```
 sudo apt-get install software-properties-common
@@ -41,9 +42,3 @@ ansible-playbook playbook.yml -K
 - Git config
 - Dotfiles
 - zsh with [zplug](https://github.com/zplug/zplug)
-
-
-## What's not included?
-
-- VSCode settings (done via Setting Sync)
-- Docker (https://docs.docker.com/docker-for-mac/install/)
