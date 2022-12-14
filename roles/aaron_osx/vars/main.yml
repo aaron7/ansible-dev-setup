@@ -50,6 +50,7 @@ homebrew_packages:
   - terraform
   - the_silver_searcher
   - tmux
+  - tmuxinator
   - tree
   - watch
   - watchman

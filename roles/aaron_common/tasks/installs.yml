@@ -27,26 +27,6 @@
   become: yes
   tags: npm
 
-# gem
-- name: Install gem packages (OSX)
-  gem:
-    name: '{{ item }}'
-    state: latest
-    user_install: no
-  with_items: '{{ gem_packages }}'
-  when: ansible_system == 'Darwin'
-  tags: gem
-
-- name: Install gem packages (Linux)
-  gem:
-    name: '{{ item }}'
-    state: latest
-    user_install: no
-  with_items: '{{ gem_packages }}'
-  become: yes
-  when: ansible_system == 'Linux'
-  tags: gem
-
 # golang
 - name: Install golang packages
   command: go install {{ item }}

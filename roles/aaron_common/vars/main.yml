@@ -21,8 +21,5 @@ npm_root_packages:
   - n
   - prettier
 
-gem_packages:
-  - tmuxinator
-
 golang_packages:
   - github.com/go-delve/delve/cmd/dlv@latest
