@@ -4,6 +4,7 @@ homebrew_taps:
   - homebrew/cask-versions
 
 homebrew_packages:
+  - asdf
   - autojump
   - automake
   - certbot
@@ -11,6 +12,7 @@ homebrew_packages:
   - colordiff
   - coreutils
   - cowsay
+  - direnv
   - exiftool
   - fdupes
   - ffmpeg
@@ -18,7 +20,6 @@ homebrew_packages:
   - fswatch
   - gawk
   - git
-  - go
   - graphviz
   - htop
   - imagemagick
@@ -26,26 +27,17 @@ homebrew_packages:
   - jpeg
   - jpegoptim
   - jq
-  - knqyf263/pet/pet
   - kubectl
   - kustomize
   - libpng
   - libtool
   - libyaml
   - ncdu
-  - node
   - parallel
   - peco
   - pkg-config
   - pngcrush
-  - postgresql
-  - pyenv
-  - pyenv-virtualenv
-  - python
   - ripgrep
-  - rtmpdump
-  - ruby
-  - ruby-install
   - shellcheck
   - sqlite
   - terraform
@@ -53,6 +45,7 @@ homebrew_packages:
   - tmux
   - tmuxinator
   - tree
+  - virtualenvwrapper
   - watch
   - watchman
   - webp
@@ -73,6 +66,8 @@ homebrew_packages_thread:
   - gmp
   - gdk-pixbuf
 
+homebrew_packages_personal:
+
 homebrew_cask_packages:
   - bitbar
   - disk-inventory-x
@@ -84,6 +79,7 @@ homebrew_cask_packages:
   - iterm2
   - postico
   - spotify
+  - syncthing
   - texmaker
   - visual-studio-code
   - vlc
@@ -94,5 +90,13 @@ homebrew_cask_packages_personal:
   - arq
   - calibre
   - keepassxc
-  - steam
+  - obsidian
   - teamviewer
+
+asdf_plugins:
+  - direnv
+  - golang
+  - nodejs
+  - python
+  - rust
+  - terraform

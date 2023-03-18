@@ -37,15 +37,15 @@ windows:
         -
         -
         -
-  - thread:
+  - second:
       layout: even-horizontal
       panes:
-        - cd ~/projects/github.com
-        - cd ~/projects/github.com
         -
-  - go:
+        -
+        -
+  - third:
       layout: even-horizontal
       panes:
-        - cd ~/go/src/github.com
-        - cd ~/go/src/github.com
-        - cd ~/go/src/github.com
+        -
+        -
+        -

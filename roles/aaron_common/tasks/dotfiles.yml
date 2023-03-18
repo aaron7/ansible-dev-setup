@@ -22,8 +22,6 @@
     force: yes
   with_items:
     - tmuxinator.zsh
-    - projects.yml
-    - vertical.yml
     - work.yml
   tags: dotfiles,newuser
 
@@ -45,6 +43,23 @@
     force: yes
   tags: dotfiles,newuser
 
+# asdf
+- name: link asdf
+  file:
+    src: '{{ ansible_env.PWD }}/roles/aaron_common/files/asdf/tool-versions'
+    path: ~/.tool-versions
+    state: link
+    force: yes
+  tags: dotfiles,newuser
+
+# ssh
+- name: link asdf
+  file:
+    src: '{{ ansible_env.PWD }}/roles/aaron_common/files/ssh/config'
+    path: ~/.ssh/config
+    state: link
+    force: yes
+  tags: dotfiles,newuser
 
 # Firefox
 - name: Get all firefox profile dirs

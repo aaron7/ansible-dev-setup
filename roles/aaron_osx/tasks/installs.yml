@@ -48,3 +48,9 @@
     state: link
     force: yes
   tags: dotfiles,newuser
+
+# asdf
+- name: Install asdf plugins
+  command: asdf plugin-add {{ item }}
+  with_items: '{{ asdf_plugins }}'
+  tags: asdf

@@ -1,11 +1,5 @@
-- name: Install common packages (pip, npm, gem, golang)
-  include: installs.yml
-
 - name: Configure git
   include: git.yml
 
 - name: Configure dotfiles
   include: dotfiles.yml
-
-- name: Configure dev
-  include: dev.yml

@@ -21,21 +21,6 @@ zplug "zsh-users/zsh-autosuggestions", from:github
 # extra auto completions
 zplug "zsh-users/zsh-completions", from:github
 
-# osx helpers
-zplug "unixorn/tumult.plugin.zsh", from:github
-
-# warn when running command you have an alias for
-zplug "djui/alias-tips", from:github
-
-# git helper scripts
-zplug "unixorn/git-extra-commands", from:github
-
-# sysadmin helpers
-zplug "skx/sysadmin-util", from:github
-
-# open branch/files in github
-zplug "peterhurford/git-it-on.zsh", from:github
-
 # Prezto theme and plugins
 zstyle ':prezto:module:*' color 'yes'
 zstyle ':prezto:module:*' case-sensitive 'no'
@@ -105,40 +90,16 @@ function awsmfa() {
 }
 
 #########################
-# Aliases
+# Inits
 #########################
 
+# asdf
+. /opt/homebrew/opt/asdf/libexec/asdf.sh
 
-#########################
-# Python
-#########################
+# direnv
+eval "$(direnv hook zsh)"
 
-export PYENV_VIRTUALENVWRAPPER_PREFER_PYVENV="true"
+# virtualenvwrapper
+# Use `mkvirtualenv -p $(asdf where python)/bin/python <name>` to create python venvs
 export WORKON_HOME=$HOME/.virtualenvs
-export PROJECT_HOME=$HOME/Devel
-export VIRTUALENVWRAPPER_PYTHON=$HOMEBREW_REPOSITORY/bin/python3
-source $HOMEBREW_REPOSITORY/bin/virtualenvwrapper.sh
-
-#########################
-# Paths
-#########################
-
-# golang
-export PATH=$PATH:$HOME/go/bin
-
-# .local/bin
-export PATH=$PATH:/Users/aaron/.local/bin
-
-# arc
-export PATH=$PATH:/Users/aaron/projects/arc/arcanist/bin
-
-# pyenv
-export PATH="/Users/aaron/.pyenv:$PATH"
-eval "$(pyenv init -)"
-eval "$(pyenv virtualenv-init -)"
-
-# gettext
-export PATH="$HOMEBREW_REPOSITORY/opt/gettext/bin:$PATH"
-
-# poetry
-export PATH=$PATH:$HOME/.poetry/bin
+source virtualenvwrapper.sh
